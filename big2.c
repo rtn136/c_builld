@@ -1,5 +1,5 @@
 #include <stdio.h>
-biggest()
+int main()
 {
     int num1, num2;
     // Ask user to enter the two numbers
@@ -18,5 +18,5 @@ biggest()
     {
         printf("Both are Equal\n");
     }
-   // return 0;
+   return 0;
 }
