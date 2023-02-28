@@ -8,7 +8,6 @@ pipeline{
                 git branch: 'main', url: 'https://github.com/rtn136/c_builld.git'
             }
         }
-
         stage('CheckRequiredFiles') {
             steps{
                 sh '''
@@ -42,7 +41,7 @@ pipeline{
         }
         stage('SaveArtifacts'){
             steps{
-                sh 'scp -v -o StrictHostKeyChecking=no app.exe ubuntu@172.31.10.171:/home/ubuntu/c_artifacts/ABC_$(date +%d_%m_%Y_%H_%M_%S).exe'
+                sh 'scp -v -o StrictHostKeyChecking=no app.exe ubuntu@172.31.10.171:/home/ubuntu/c_artifacts/app_$(date +%d_%m_%Y_%H_%M_%S).exe'
             }
         }
     }
